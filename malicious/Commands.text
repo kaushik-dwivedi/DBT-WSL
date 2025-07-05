@@ -1,0 +1,539 @@
+  kaush@DESKTOP-99UABT9:~/kd/DBT Project$ python3 -m venv dbtProjects
+  kaush@DESKTOP-99UABT9:~/kd/DBT Project$ cd /home/kaush/kd/DBT Project/dbtProjects/bin/activate
+  bash: cd: too many arguments
+  kaush@DESKTOP-99UABT9:~/kd/DBT Project$ source dbtProjects/bin/activate
+  (dbtProjects) kaush@DESKTOP-99UABT9:~/kd/DBT Project$ pip install dbt-core dbt-bigquery 
+  Collecting dbt-core
+    Downloading dbt_core-1.10.3-py3-none-any.whl.metadata (4.2 kB)
+  Collecting dbt-bigquery
+    Downloading dbt_bigquery-1.9.2-py3-none-any.whl.metadata (3.3 kB)
+  Collecting agate<1.10,>=1.7.0 (from dbt-core)
+    Downloading agate-1.9.1-py2.py3-none-any.whl.metadata (3.2 kB)
+  Collecting Jinja2<4,>=3.1.3 (from dbt-core)
+    Using cached jinja2-3.1.6-py3-none-any.whl.metadata (2.9 kB)
+  Collecting mashumaro<3.15,>=3.9 (from mashumaro[msgpack]<3.15,>=3.9->dbt-core)
+    Downloading mashumaro-3.14-py3-none-any.whl.metadata (114 kB)
+      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 114.4/114.4 kB 8.1 MB/s eta 0:00:00
+  Collecting click<9.0,>=8.0.2 (from dbt-core)
+    Using cached click-8.2.1-py3-none-any.whl.metadata (2.5 kB)
+  Collecting jsonschema<5.0,>=4.19.1 (from dbt-core)
+    Using cached jsonschema-4.24.0-py3-none-any.whl.metadata (7.8 kB)
+  Collecting networkx<4.0,>=2.3 (from dbt-core)
+    Downloading networkx-3.5-py3-none-any.whl.metadata (6.3 kB)
+  Collecting protobuf<6.0,>=5.0 (from dbt-core)
+    Downloading protobuf-5.29.5-cp38-abi3-manylinux2014_x86_64.whl.metadata (592 bytes)
+  Collecting requests<3.0.0 (from dbt-core)
+    Using cached requests-2.32.4-py3-none-any.whl.metadata (4.9 kB)
+  Collecting snowplow-tracker<2.0,>=1.0.2 (from dbt-core)
+    Downloading snowplow_tracker-1.1.0-py3-none-any.whl.metadata (5.7 kB)
+  Collecting pathspec<0.13,>=0.9 (from dbt-core)
+    Using cached pathspec-0.12.1-py3-none-any.whl.metadata (21 kB)
+  Collecting sqlparse<0.6.0,>=0.5.0 (from dbt-core)
+    Using cached sqlparse-0.5.3-py3-none-any.whl.metadata (3.9 kB)
+  Collecting dbt-extractor<=0.6,>=0.5.0 (from dbt-core)
+    Downloading dbt_extractor-0.6.0-cp39-abi3-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (4.6 kB)
+  Collecting dbt-semantic-interfaces<0.9,>=0.8.3 (from dbt-core)
+    Downloading dbt_semantic_interfaces-0.8.5-py3-none-any.whl.metadata (2.6 kB)
+  Collecting dbt-common<2.0,>=1.25.1 (from dbt-core)
+    Downloading dbt_common-1.25.1-py3-none-any.whl.metadata (5.0 kB)
+  Collecting dbt-adapters<2.0,>=1.15.2 (from dbt-core)
+    Downloading dbt_adapters-1.16.0-py3-none-any.whl.metadata (4.5 kB)
+  Collecting dbt-protos<2.0,>=1.0.315 (from dbt-core)
+    Downloading dbt_protos-1.0.335-py3-none-any.whl.metadata (859 bytes)
+  Collecting pydantic<3 (from dbt-core)
+    Downloading pydantic-2.11.7-py3-none-any.whl.metadata (67 kB)
+      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 68.0/68.0 kB 6.7 MB/s eta 0:00:00
+  Collecting packaging>20.9 (from dbt-core)
+    Using cached packaging-25.0-py3-none-any.whl.metadata (3.3 kB)
+  Collecting pytz>=2015.7 (from dbt-core)
+    Using cached pytz-2025.2-py2.py3-none-any.whl.metadata (22 kB)
+  Collecting pyyaml>=6.0 (from dbt-core)
+    Using cached PyYAML-6.0.2-cp312-cp312-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (2.1 kB)
+  Collecting daff>=1.3.46 (from dbt-core)
+    Downloading daff-1.4.2-py3-none-any.whl.metadata (10 kB)
+  Collecting typing-extensions>=4.4 (from dbt-core)
+    Downloading typing_extensions-4.14.1-py3-none-any.whl.metadata (3.0 kB)
+  Collecting google-api-core>=2.11.0 (from dbt-bigquery)
+    Downloading google_api_core-2.25.1-py3-none-any.whl.metadata (3.0 kB)
+  Collecting google-cloud-aiplatform>=1.72.0 (from dbt-bigquery)
+    Downloading google_cloud_aiplatform-1.101.0-py2.py3-none-any.whl.metadata (38 kB)
+  Collecting google-cloud-bigquery<4.0,>=3.0 (from google-cloud-bigquery[pandas]<4.0,>=3.0->dbt-bigquery)
+    Downloading google_cloud_bigquery-3.34.0-py3-none-any.whl.metadata (8.0 kB)
+  Collecting google-cloud-dataproc~=5.0 (from dbt-bigquery)
+    Downloading google_cloud_dataproc-5.21.0-py3-none-any.whl.metadata (9.7 kB)
+  Collecting google-cloud-storage<3.2,>=2.4 (from dbt-bigquery)
+    Downloading google_cloud_storage-3.1.1-py3-none-any.whl.metadata (13 kB)
+  Collecting nbformat>=5.10.4 (from dbt-bigquery)
+    Downloading nbformat-5.10.4-py3-none-any.whl.metadata (3.6 kB)
+  Collecting Babel>=2.0 (from agate<1.10,>=1.7.0->dbt-core)
+    Downloading babel-2.17.0-py3-none-any.whl.metadata (2.0 kB)
+  Collecting isodate>=0.5.4 (from agate<1.10,>=1.7.0->dbt-core)
+    Downloading isodate-0.7.2-py3-none-any.whl.metadata (11 kB)
+  Collecting leather>=0.3.2 (from agate<1.10,>=1.7.0->dbt-core)
+    Downloading leather-0.4.0-py2.py3-none-any.whl.metadata (2.8 kB)
+  Collecting parsedatetime!=2.5,>=2.1 (from agate<1.10,>=1.7.0->dbt-core)
+    Downloading parsedatetime-2.6-py3-none-any.whl.metadata (4.7 kB)
+  Collecting python-slugify>=1.2.1 (from agate<1.10,>=1.7.0->dbt-core)
+    Using cached python_slugify-8.0.4-py2.py3-none-any.whl.metadata (8.5 kB)
+  Collecting pytimeparse>=1.1.5 (from agate<1.10,>=1.7.0->dbt-core)
+    Downloading pytimeparse-1.1.8-py2.py3-none-any.whl.metadata (3.4 kB)
+  Collecting colorama<0.5,>=0.3.9 (from dbt-common<2.0,>=1.25.1->dbt-core)
+    Using cached colorama-0.4.6-py2.py3-none-any.whl.metadata (17 kB)
+  Collecting deepdiff<8.0,>=7.0 (from dbt-common<2.0,>=1.25.1->dbt-core)
+    Downloading deepdiff-7.0.1-py3-none-any.whl.metadata (6.8 kB)
+  Collecting isodate>=0.5.4 (from agate<1.10,>=1.7.0->dbt-core)
+    Downloading isodate-0.6.1-py2.py3-none-any.whl.metadata (9.6 kB)
+  Collecting python-dateutil<3.0,>=2.0 (from dbt-common<2.0,>=1.25.1->dbt-core)
+    Using cached python_dateutil-2.9.0.post0-py2.py3-none-any.whl.metadata (8.4 kB)
+  Collecting importlib-metadata<9,>=6.0 (from dbt-semantic-interfaces<0.9,>=0.8.3->dbt-core)
+    Downloading importlib_metadata-8.7.0-py3-none-any.whl.metadata (4.8 kB)
+  Collecting more-itertools<11.0,>=8.0 (from dbt-semantic-interfaces<0.9,>=0.8.3->dbt-core)
+    Using cached more_itertools-10.7.0-py3-none-any.whl.metadata (37 kB)
+  Collecting googleapis-common-protos<2.0.0,>=1.56.2 (from google-api-core>=2.11.0->dbt-bigquery)
+    Using cached googleapis_common_protos-1.70.0-py3-none-any.whl.metadata (9.3 kB)
+  Collecting proto-plus<2.0.0,>=1.22.3 (from google-api-core>=2.11.0->dbt-bigquery)
+    Downloading proto_plus-1.26.1-py3-none-any.whl.metadata (2.2 kB)
+  Collecting google-auth<3.0.0,>=2.14.1 (from google-api-core>=2.11.0->dbt-bigquery)
+    Downloading google_auth-2.40.3-py2.py3-none-any.whl.metadata (6.2 kB)
+  Collecting google-cloud-storage<3.2,>=2.4 (from dbt-bigquery)
+    Downloading google_cloud_storage-2.19.0-py2.py3-none-any.whl.metadata (9.1 kB)
+  Collecting google-cloud-resource-manager<3.0.0,>=1.3.3 (from google-cloud-aiplatform>=1.72.0->dbt-bigquery)
+    Downloading google_cloud_resource_manager-1.14.2-py3-none-any.whl.metadata (9.6 kB)
+  Collecting shapely<3.0.0 (from google-cloud-aiplatform>=1.72.0->dbt-bigquery)
+    Downloading shapely-2.1.1-cp312-cp312-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (6.7 kB)
+  Collecting google-genai<2.0.0,>=1.0.0 (from google-cloud-aiplatform>=1.72.0->dbt-bigquery)
+    Downloading google_genai-1.24.0-py3-none-any.whl.metadata (40 kB)
+      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 40.5/40.5 kB 9.4 MB/s eta 0:00:00
+  Collecting docstring_parser<1 (from google-cloud-aiplatform>=1.72.0->dbt-bigquery)
+    Downloading docstring_parser-0.16-py3-none-any.whl.metadata (3.0 kB)
+  Collecting google-cloud-core<3.0.0,>=2.4.1 (from google-cloud-bigquery<4.0,>=3.0->google-cloud-bigquery[pandas]<4.0,>=3.0->dbt-bigquery)
+    Downloading google_cloud_core-2.4.3-py2.py3-none-any.whl.metadata (2.7 kB)
+  Collecting google-resumable-media<3.0.0,>=2.0.0 (from google-cloud-bigquery<4.0,>=3.0->google-cloud-bigquery[pandas]<4.0,>=3.0->dbt-bigquery)
+    Downloading google_resumable_media-2.7.2-py2.py3-none-any.whl.metadata (2.2 kB)
+  Collecting pandas>=1.3.0 (from google-cloud-bigquery[pandas]<4.0,>=3.0->dbt-bigquery)
+    Downloading pandas-2.3.0-cp312-cp312-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (91 kB)
+      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 91.2/91.2 kB 9.3 MB/s eta 0:00:00
+  Collecting pandas-gbq>=0.26.1 (from google-cloud-bigquery[pandas]<4.0,>=3.0->dbt-bigquery)
+    Downloading pandas_gbq-0.29.1-py3-none-any.whl.metadata (3.6 kB)
+  Collecting grpcio<2.0.0,>=1.47.0 (from google-cloud-bigquery[pandas]<4.0,>=3.0->dbt-bigquery)
+    Downloading grpcio-1.73.1-cp312-cp312-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (3.8 kB)
+  Collecting pyarrow>=3.0.0 (from google-cloud-bigquery[pandas]<4.0,>=3.0->dbt-bigquery)
+    Downloading pyarrow-20.0.0-cp312-cp312-manylinux_2_28_x86_64.whl.metadata (3.3 kB)
+  Collecting db-dtypes<2.0.0,>=1.0.4 (from google-cloud-bigquery[pandas]<4.0,>=3.0->dbt-bigquery)
+    Downloading db_dtypes-1.4.3-py3-none-any.whl.metadata (3.0 kB)
+  Collecting grpc-google-iam-v1<1.0.0,>=0.14.0 (from google-cloud-dataproc~=5.0->dbt-bigquery)
+    Downloading grpc_google_iam_v1-0.14.2-py3-none-any.whl.metadata (9.1 kB)
+  Collecting google-crc32c<2.0dev,>=1.0 (from google-cloud-storage<3.2,>=2.4->dbt-bigquery)
+    Downloading google_crc32c-1.7.1-cp312-cp312-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (2.3 kB)
+  Collecting MarkupSafe>=2.0 (from Jinja2<4,>=3.1.3->dbt-core)
+    Using cached MarkupSafe-3.0.2-cp312-cp312-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (4.0 kB)
+  Collecting attrs>=22.2.0 (from jsonschema<5.0,>=4.19.1->dbt-core)
+    Using cached attrs-25.3.0-py3-none-any.whl.metadata (10 kB)
+  Collecting jsonschema-specifications>=2023.03.6 (from jsonschema<5.0,>=4.19.1->dbt-core)
+    Using cached jsonschema_specifications-2025.4.1-py3-none-any.whl.metadata (2.9 kB)
+  Collecting referencing>=0.28.4 (from jsonschema<5.0,>=4.19.1->dbt-core)
+    Using cached referencing-0.36.2-py3-none-any.whl.metadata (2.8 kB)
+  Collecting rpds-py>=0.7.1 (from jsonschema<5.0,>=4.19.1->dbt-core)
+    Downloading rpds_py-0.26.0-cp312-cp312-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (4.2 kB)
+  Collecting msgpack>=0.5.6 (from mashumaro[msgpack]<3.15,>=3.9->dbt-core)
+    Downloading msgpack-1.1.1-cp312-cp312-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (8.4 kB)
+  Collecting fastjsonschema>=2.15 (from nbformat>=5.10.4->dbt-bigquery)
+    Downloading fastjsonschema-2.21.1-py3-none-any.whl.metadata (2.2 kB)
+  Collecting jupyter-core!=5.0.*,>=4.12 (from nbformat>=5.10.4->dbt-bigquery)
+    Downloading jupyter_core-5.8.1-py3-none-any.whl.metadata (1.6 kB)
+  Collecting traitlets>=5.1 (from nbformat>=5.10.4->dbt-bigquery)
+    Downloading traitlets-5.14.3-py3-none-any.whl.metadata (10 kB)
+  Collecting annotated-types>=0.6.0 (from pydantic<3->dbt-core)
+    Using cached annotated_types-0.7.0-py3-none-any.whl.metadata (15 kB)
+  Collecting pydantic-core==2.33.2 (from pydantic<3->dbt-core)
+    Using cached pydantic_core-2.33.2-cp312-cp312-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (6.8 kB)
+  Collecting typing-inspection>=0.4.0 (from pydantic<3->dbt-core)
+    Using cached typing_inspection-0.4.1-py3-none-any.whl.metadata (2.6 kB)
+  Collecting charset_normalizer<4,>=2 (from requests<3.0.0->dbt-core)
+    Using cached charset_normalizer-3.4.2-cp312-cp312-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (35 kB)
+  Collecting idna<4,>=2.5 (from requests<3.0.0->dbt-core)
+    Using cached idna-3.10-py3-none-any.whl.metadata (10 kB)
+  Collecting urllib3<3,>=1.21.1 (from requests<3.0.0->dbt-core)
+    Using cached urllib3-2.5.0-py3-none-any.whl.metadata (6.5 kB)
+  Collecting certifi>=2017.4.17 (from requests<3.0.0->dbt-core)
+    Using cached certifi-2025.6.15-py3-none-any.whl.metadata (2.4 kB)
+  Collecting numpy>=1.24.0 (from db-dtypes<2.0.0,>=1.0.4->google-cloud-bigquery[pandas]<4.0,>=3.0->dbt-bigquery)
+    Downloading numpy-2.3.1-cp312-cp312-manylinux_2_28_x86_64.whl.metadata (62 kB)
+      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 62.1/62.1 kB 6.1 MB/s eta 0:00:00
+  Collecting ordered-set<4.2.0,>=4.1.0 (from deepdiff<8.0,>=7.0->dbt-common<2.0,>=1.25.1->dbt-core)
+    Downloading ordered_set-4.1.0-py3-none-any.whl.metadata (5.3 kB)
+  Collecting grpcio-status<2.0.0,>=1.33.2 (from google-api-core[grpc]!=2.0.*,!=2.1.*,!=2.2.*,!=2.3.*,!=2.4.*,!=2.5.*,!=2.6.*,!=2.7.*,<3.0.0,>=1.34.1->google-cloud-aiplatform>=1.72.0->dbt-bigquery)
+    Downloading grpcio_status-1.73.1-py3-none-any.whl.metadata (1.1 kB)
+  Collecting cachetools<6.0,>=2.0.0 (from google-auth<3.0.0,>=2.14.1->google-api-core>=2.11.0->dbt-bigquery)
+    Downloading cachetools-5.5.2-py3-none-any.whl.metadata (5.4 kB)
+  Collecting pyasn1-modules>=0.2.1 (from google-auth<3.0.0,>=2.14.1->google-api-core>=2.11.0->dbt-bigquery)
+    Downloading pyasn1_modules-0.4.2-py3-none-any.whl.metadata (3.5 kB)
+  Collecting rsa<5,>=3.1.4 (from google-auth<3.0.0,>=2.14.1->google-api-core>=2.11.0->dbt-bigquery)
+    Downloading rsa-4.9.1-py3-none-any.whl.metadata (5.6 kB)
+  Collecting anyio<5.0.0,>=4.8.0 (from google-genai<2.0.0,>=1.0.0->google-cloud-aiplatform>=1.72.0->dbt-bigquery)
+    Using cached anyio-4.9.0-py3-none-any.whl.metadata (4.7 kB)
+  Collecting httpx<1.0.0,>=0.28.1 (from google-genai<2.0.0,>=1.0.0->google-cloud-aiplatform>=1.72.0->dbt-bigquery)
+    Downloading httpx-0.28.1-py3-none-any.whl.metadata (7.1 kB)
+  Collecting tenacity<9.0.0,>=8.2.3 (from google-genai<2.0.0,>=1.0.0->google-cloud-aiplatform>=1.72.0->dbt-bigquery)
+    Downloading tenacity-8.5.0-py3-none-any.whl.metadata (1.2 kB)
+  Collecting websockets<15.1.0,>=13.0.0 (from google-genai<2.0.0,>=1.0.0->google-cloud-aiplatform>=1.72.0->dbt-bigquery)
+    Downloading websockets-15.0.1-cp312-cp312-manylinux_2_5_x86_64.manylinux1_x86_64.manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (6.8 kB)
+  Collecting zipp>=3.20 (from importlib-metadata<9,>=6.0->dbt-semantic-interfaces<0.9,>=0.8.3->dbt-core)
+    Downloading zipp-3.23.0-py3-none-any.whl.metadata (3.6 kB)
+  Collecting six (from isodate>=0.5.4->agate<1.10,>=1.7.0->dbt-core)
+    Using cached six-1.17.0-py2.py3-none-any.whl.metadata (1.7 kB)
+  Collecting platformdirs>=2.5 (from jupyter-core!=5.0.*,>=4.12->nbformat>=5.10.4->dbt-bigquery)
+    Downloading platformdirs-4.3.8-py3-none-any.whl.metadata (12 kB)
+  Collecting tzdata>=2022.7 (from pandas>=1.3.0->google-cloud-bigquery[pandas]<4.0,>=3.0->dbt-bigquery)
+    Using cached tzdata-2025.2-py2.py3-none-any.whl.metadata (1.4 kB)
+  Collecting setuptools (from pandas-gbq>=0.26.1->google-cloud-bigquery[pandas]<4.0,>=3.0->dbt-bigquery)
+    Using cached setuptools-80.9.0-py3-none-any.whl.metadata (6.6 kB)
+  Collecting pydata-google-auth>=1.5.0 (from pandas-gbq>=0.26.1->google-cloud-bigquery[pandas]<4.0,>=3.0->dbt-bigquery)
+    Downloading pydata_google_auth-1.9.1-py2.py3-none-any.whl.metadata (2.8 kB)
+  Collecting google-auth-oauthlib>=0.7.0 (from pandas-gbq>=0.26.1->google-cloud-bigquery[pandas]<4.0,>=3.0->dbt-bigquery)
+    Downloading google_auth_oauthlib-1.2.2-py3-none-any.whl.metadata (2.7 kB)
+  Collecting text-unidecode>=1.3 (from python-slugify>=1.2.1->agate<1.10,>=1.7.0->dbt-core)
+    Using cached text_unidecode-1.3-py2.py3-none-any.whl.metadata (2.4 kB)
+  Collecting sniffio>=1.1 (from anyio<5.0.0,>=4.8.0->google-genai<2.0.0,>=1.0.0->google-cloud-aiplatform>=1.72.0->dbt-bigquery)
+    Using cached sniffio-1.3.1-py3-none-any.whl.metadata (3.9 kB)
+  Collecting requests-oauthlib>=0.7.0 (from google-auth-oauthlib>=0.7.0->pandas-gbq>=0.26.1->google-cloud-bigquery[pandas]<4.0,>=3.0->dbt-bigquery)
+    Downloading requests_oauthlib-2.0.0-py2.py3-none-any.whl.metadata (11 kB)
+  INFO: pip is looking at multiple versions of grpcio-status to determine which version is compatible with other requirements. This could take a while.
+  Collecting grpcio-status<2.0.0,>=1.33.2 (from google-api-core[grpc]!=2.0.*,!=2.1.*,!=2.2.*,!=2.3.*,!=2.4.*,!=2.5.*,!=2.6.*,!=2.7.*,<3.0.0,>=1.34.1->google-cloud-aiplatform>=1.72.0->dbt-bigquery)
+    Downloading grpcio_status-1.73.0-py3-none-any.whl.metadata (1.1 kB)
+    Downloading grpcio_status-1.72.2-py3-none-any.whl.metadata (1.1 kB)
+    Downloading grpcio_status-1.72.1-py3-none-any.whl.metadata (1.1 kB)
+    Downloading grpcio_status-1.71.2-py3-none-any.whl.metadata (1.1 kB)
+  Collecting httpcore==1.* (from httpx<1.0.0,>=0.28.1->google-genai<2.0.0,>=1.0.0->google-cloud-aiplatform>=1.72.0->dbt-bigquery)
+    Using cached httpcore-1.0.9-py3-none-any.whl.metadata (21 kB)
+  Collecting h11>=0.16 (from httpcore==1.*->httpx<1.0.0,>=0.28.1->google-genai<2.0.0,>=1.0.0->google-cloud-aiplatform>=1.72.0->dbt-bigquery)
+    Using cached h11-0.16.0-py3-none-any.whl.metadata (8.3 kB)
+  Collecting pyasn1<0.7.0,>=0.6.1 (from pyasn1-modules>=0.2.1->google-auth<3.0.0,>=2.14.1->google-api-core>=2.11.0->dbt-bigquery)
+    Downloading pyasn1-0.6.1-py3-none-any.whl.metadata (8.4 kB)
+  Collecting oauthlib>=3.0.0 (from requests-oauthlib>=0.7.0->google-auth-oauthlib>=0.7.0->pandas-gbq>=0.26.1->google-cloud-bigquery[pandas]<4.0,>=3.0->dbt-bigquery)
+    Downloading oauthlib-3.3.1-py3-none-any.whl.metadata (7.9 kB)
+  Downloading dbt_core-1.10.3-py3-none-any.whl (977 kB)
+    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 977.3/977.3 kB 14.0 MB/s eta 0:00:00
+  Downloading dbt_bigquery-1.9.2-py3-none-any.whl (87 kB)
+    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 87.9/87.9 kB 7.9 MB/s eta 0:00:00
+  Downloading agate-1.9.1-py2.py3-none-any.whl (95 kB)
+    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 95.1/95.1 kB 7.7 MB/s eta 0:00:00
+  Using cached click-8.2.1-py3-none-any.whl (102 kB)
+  Downloading daff-1.4.2-py3-none-any.whl (144 kB)
+    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 144.9/144.9 kB 11.3 MB/s eta 0:00:00
+  Downloading dbt_adapters-1.16.0-py3-none-any.whl (166 kB)
+    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 166.6/166.6 kB 11.7 MB/s eta 0:00:00
+  Downloading dbt_common-1.25.1-py3-none-any.whl (85 kB)
+    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 86.0/86.0 kB 8.8 MB/s eta 0:00:00
+  Downloading dbt_extractor-0.6.0-cp39-abi3-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (442 kB)
+    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 442.7/442.7 kB 14.5 MB/s eta 0:00:00
+  Downloading dbt_protos-1.0.335-py3-none-any.whl (91 kB)
+    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 91.5/91.5 kB 10.5 MB/s eta 0:00:00
+  Downloading dbt_semantic_interfaces-0.8.5-py3-none-any.whl (146 kB)
+    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 146.6/146.6 kB 14.1 MB/s eta 0:00:00
+  Downloading google_api_core-2.25.1-py3-none-any.whl (160 kB)
+    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 160.8/160.8 kB 15.1 MB/s eta 0:00:00
+  Downloading google_cloud_aiplatform-1.101.0-py2.py3-none-any.whl (7.9 MB)
+    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 7.9/7.9 MB 15.8 MB/s eta 0:00:00
+  Downloading google_cloud_bigquery-3.34.0-py3-none-any.whl (253 kB)
+    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 253.6/253.6 kB 17.8 MB/s eta 0:00:00
+  Downloading google_cloud_dataproc-5.21.0-py3-none-any.whl (482 kB)
+    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 482.8/482.8 kB 32.3 MB/s eta 0:00:00
+  Downloading google_cloud_storage-2.19.0-py2.py3-none-any.whl (131 kB)
+    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 131.8/131.8 kB 16.6 MB/s eta 0:00:00
+  Using cached jinja2-3.1.6-py3-none-any.whl (134 kB)
+  Using cached jsonschema-4.24.0-py3-none-any.whl (88 kB)
+  Downloading mashumaro-3.14-py3-none-any.whl (92 kB)
+    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 92.2/92.2 kB 23.9 MB/s eta 0:00:00
+  Downloading nbformat-5.10.4-py3-none-any.whl (78 kB)
+    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 78.5/78.5 kB 17.7 MB/s eta 0:00:00
+  Downloading networkx-3.5-py3-none-any.whl (2.0 MB)
+    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 2.0/2.0 MB 16.5 MB/s eta 0:00:00
+  Using cached packaging-25.0-py3-none-any.whl (66 kB)
+  Using cached pathspec-0.12.1-py3-none-any.whl (31 kB)
+  Downloading protobuf-5.29.5-cp38-abi3-manylinux2014_x86_64.whl (319 kB)
+    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 319.9/319.9 kB 17.0 MB/s eta 0:00:00
+  Downloading pydantic-2.11.7-py3-none-any.whl (444 kB)
+    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 444.8/444.8 kB 20.2 MB/s eta 0:00:00
+  Using cached pydantic_core-2.33.2-cp312-cp312-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (2.0 MB)
+  Using cached pytz-2025.2-py2.py3-none-any.whl (509 kB)
+  Using cached PyYAML-6.0.2-cp312-cp312-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (767 kB)
+  Using cached requests-2.32.4-py3-none-any.whl (64 kB)
+  Downloading snowplow_tracker-1.1.0-py3-none-any.whl (44 kB)
+    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 44.1/44.1 kB 8.4 MB/s eta 0:00:00
+  Using cached sqlparse-0.5.3-py3-none-any.whl (44 kB)
+  Downloading typing_extensions-4.14.1-py3-none-any.whl (43 kB)
+    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 43.9/43.9 kB 7.5 MB/s eta 0:00:00
+  Using cached annotated_types-0.7.0-py3-none-any.whl (13 kB)
+  Using cached attrs-25.3.0-py3-none-any.whl (63 kB)
+  Downloading babel-2.17.0-py3-none-any.whl (10.2 MB)
+    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 10.2/10.2 MB 14.3 MB/s eta 0:00:00
+  Using cached certifi-2025.6.15-py3-none-any.whl (157 kB)
+  Using cached charset_normalizer-3.4.2-cp312-cp312-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (148 kB)
+  Downloading colorama-0.4.6-py2.py3-none-any.whl (25 kB)
+  Downloading db_dtypes-1.4.3-py3-none-any.whl (18 kB)
+  Downloading deepdiff-7.0.1-py3-none-any.whl (80 kB)
+    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 80.8/80.8 kB 13.0 MB/s eta 0:00:00
+  Downloading docstring_parser-0.16-py3-none-any.whl (36 kB)
+  Downloading fastjsonschema-2.21.1-py3-none-any.whl (23 kB)
+  Downloading google_auth-2.40.3-py2.py3-none-any.whl (216 kB)
+    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 216.1/216.1 kB 17.0 MB/s eta 0:00:00
+  Downloading google_cloud_core-2.4.3-py2.py3-none-any.whl (29 kB)
+  Downloading google_cloud_resource_manager-1.14.2-py3-none-any.whl (394 kB)
+    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 394.3/394.3 kB 17.7 MB/s eta 0:00:00
+  Downloading google_crc32c-1.7.1-cp312-cp312-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (32 kB)
+  Downloading google_genai-1.24.0-py3-none-any.whl (226 kB)
+    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 226.1/226.1 kB 17.3 MB/s eta 0:00:00
+  Downloading google_resumable_media-2.7.2-py2.py3-none-any.whl (81 kB)
+    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 81.3/81.3 kB 9.8 MB/s eta 0:00:00
+  Using cached googleapis_common_protos-1.70.0-py3-none-any.whl (294 kB)
+  Downloading grpc_google_iam_v1-0.14.2-py3-none-any.whl (19 kB)
+  Downloading grpcio-1.73.1-cp312-cp312-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (6.0 MB)
+    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 6.0/6.0 MB 11.1 MB/s eta 0:00:00
+  Using cached idna-3.10-py3-none-any.whl (70 kB)
+  Downloading importlib_metadata-8.7.0-py3-none-any.whl (27 kB)
+  Downloading isodate-0.6.1-py2.py3-none-any.whl (41 kB)
+    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 41.7/41.7 kB 9.2 MB/s eta 0:00:00
+  Using cached jsonschema_specifications-2025.4.1-py3-none-any.whl (18 kB)
+  Downloading jupyter_core-5.8.1-py3-none-any.whl (28 kB)
+  Downloading leather-0.4.0-py2.py3-none-any.whl (30 kB)
+  Using cached MarkupSafe-3.0.2-cp312-cp312-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (23 kB)
+  Using cached more_itertools-10.7.0-py3-none-any.whl (65 kB)
+  Downloading msgpack-1.1.1-cp312-cp312-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (426 kB)
+    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 426.9/426.9 kB 38.7 MB/s eta 0:00:00
+  Downloading pandas-2.3.0-cp312-cp312-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (12.0 MB)
+    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 12.0/12.0 MB 13.4 MB/s eta 0:00:00
+  Downloading pandas_gbq-0.29.1-py3-none-any.whl (41 kB)
+    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 41.1/41.1 kB 8.8 MB/s eta 0:00:00
+  Downloading parsedatetime-2.6-py3-none-any.whl (42 kB)
+    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 42.5/42.5 kB 8.7 MB/s eta 0:00:00
+  Downloading proto_plus-1.26.1-py3-none-any.whl (50 kB)
+    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 50.2/50.2 kB 9.2 MB/s eta 0:00:00
+  Downloading pyarrow-20.0.0-cp312-cp312-manylinux_2_28_x86_64.whl (42.3 MB)
+    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 42.3/42.3 MB 12.7 MB/s eta 0:00:00
+  Using cached python_dateutil-2.9.0.post0-py2.py3-none-any.whl (229 kB)
+  Using cached python_slugify-8.0.4-py2.py3-none-any.whl (10 kB)
+  Downloading pytimeparse-1.1.8-py2.py3-none-any.whl (10.0 kB)
+  Using cached referencing-0.36.2-py3-none-any.whl (26 kB)
+  Downloading rpds_py-0.26.0-cp312-cp312-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (386 kB)
+    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 386.1/386.1 kB 24.3 MB/s eta 0:00:00
+  Downloading shapely-2.1.1-cp312-cp312-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (3.1 MB)
+    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 3.1/3.1 MB 19.6 MB/s eta 0:00:00
+  Downloading traitlets-5.14.3-py3-none-any.whl (85 kB)
+    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 85.4/85.4 kB 12.8 MB/s eta 0:00:00
+  Using cached typing_inspection-0.4.1-py3-none-any.whl (14 kB)
+  Using cached urllib3-2.5.0-py3-none-any.whl (129 kB)
+  Using cached anyio-4.9.0-py3-none-any.whl (100 kB)
+  Downloading cachetools-5.5.2-py3-none-any.whl (10 kB)
+  Downloading google_auth_oauthlib-1.2.2-py3-none-any.whl (19 kB)
+  Downloading grpcio_status-1.71.2-py3-none-any.whl (14 kB)
+  Downloading httpx-0.28.1-py3-none-any.whl (73 kB)
+    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 73.5/73.5 kB 18.2 MB/s eta 0:00:00
+  Using cached httpcore-1.0.9-py3-none-any.whl (78 kB)
+  Downloading numpy-2.3.1-cp312-cp312-manylinux_2_28_x86_64.whl (16.6 MB)
+    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 16.6/16.6 MB 13.3 MB/s eta 0:00:00
+  Downloading ordered_set-4.1.0-py3-none-any.whl (7.6 kB)
+  Downloading platformdirs-4.3.8-py3-none-any.whl (18 kB)
+  Downloading pyasn1_modules-0.4.2-py3-none-any.whl (181 kB)
+    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 181.3/181.3 kB 17.0 MB/s eta 0:00:00
+  Downloading pydata_google_auth-1.9.1-py2.py3-none-any.whl (15 kB)
+  Downloading rsa-4.9.1-py3-none-any.whl (34 kB)
+  Using cached six-1.17.0-py2.py3-none-any.whl (11 kB)
+  Downloading tenacity-8.5.0-py3-none-any.whl (28 kB)
+  Using cached text_unidecode-1.3-py2.py3-none-any.whl (78 kB)
+  Using cached tzdata-2025.2-py2.py3-none-any.whl (347 kB)
+  Downloading websockets-15.0.1-cp312-cp312-manylinux_2_5_x86_64.manylinux1_x86_64.manylinux_2_17_x86_64.manylinux2014_x86_64.whl (182 kB)
+    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 182.5/182.5 kB 40.0 MB/s eta 0:00:00
+  Downloading zipp-3.23.0-py3-none-any.whl (10 kB)
+  Using cached setuptools-80.9.0-py3-none-any.whl (1.2 MB)
+  Downloading pyasn1-0.6.1-py3-none-any.whl (83 kB)
+    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 83.1/83.1 kB 20.8 MB/s eta 0:00:00
+  Downloading requests_oauthlib-2.0.0-py2.py3-none-any.whl (24 kB)
+  Using cached sniffio-1.3.1-py3-none-any.whl (10 kB)
+  Using cached h11-0.16.0-py3-none-any.whl (37 kB)
+  Downloading oauthlib-3.3.1-py3-none-any.whl (160 kB)
+    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 160.1/160.1 kB 37.1 MB/s eta 0:00:00
+  Installing collected packages: text-unidecode, pytz, pytimeparse, parsedatetime, leather, fastjsonschema, daff, zipp, websockets, urllib3, tzdata, typing-extensions, traitlets, tenacity, sqlparse, sniffio, six, setuptools, rpds-py, pyyaml, python-slugify, pyasn1, pyarrow, protobuf, platformdirs, pathspec, packaging, ordered-set, oauthlib, numpy, networkx, msgpack, more-itertools, MarkupSafe, idna, h11, grpcio, google-crc32c, docstring_parser, dbt-extractor, colorama, click, charset_normalizer, certifi, cachetools, Babel, attrs, annotated-types, typing-inspection, shapely, rsa, requests, referencing, python-dateutil, pydantic-core, pyasn1-modules, proto-plus, mashumaro, jupyter-core, Jinja2, isodate, importlib-metadata, httpcore, googleapis-common-protos, google-resumable-media, deepdiff, dbt-protos, anyio, snowplow-tracker, requests-oauthlib, pydantic, pandas, jsonschema-specifications, httpx, grpcio-status, google-auth, agate, jsonschema, grpc-google-iam-v1, google-genai, google-auth-oauthlib, google-api-core, db-dtypes, pydata-google-auth, nbformat, google-cloud-core, dbt-semantic-interfaces, dbt-common, google-cloud-storage, google-cloud-resource-manager, google-cloud-dataproc, google-cloud-bigquery, dbt-adapters, pandas-gbq, google-cloud-aiplatform, dbt-core, dbt-bigquery
+  Successfully installed Babel-2.17.0 Jinja2-3.1.6 MarkupSafe-3.0.2 agate-1.9.1 annotated-types-0.7.0 anyio-4.9.0 attrs-25.3.0 cachetools-5.5.2 certifi-2025.6.15 charset_normalizer-3.4.2 click-8.2.1 colorama-0.4.6 daff-1.4.2 db-dtypes-1.4.3 dbt-adapters-1.16.0 dbt-bigquery-1.9.2 dbt-common-1.25.1 dbt-core-1.10.3 dbt-extractor-0.6.0 dbt-protos-1.0.335 dbt-semantic-interfaces-0.8.5 deepdiff-7.0.1 docstring_parser-0.16 fastjsonschema-2.21.1 google-api-core-2.25.1 google-auth-2.40.3 google-auth-oauthlib-1.2.2 google-cloud-aiplatform-1.101.0 google-cloud-bigquery-3.34.0 google-cloud-core-2.4.3 google-cloud-dataproc-5.21.0 google-cloud-resource-manager-1.14.2 google-cloud-storage-2.19.0 google-crc32c-1.7.1 google-genai-1.24.0 google-resumable-media-2.7.2 googleapis-common-protos-1.70.0 grpc-google-iam-v1-0.14.2 grpcio-1.73.1 grpcio-status-1.71.2 h11-0.16.0 httpcore-1.0.9 httpx-0.28.1 idna-3.10 importlib-metadata-8.7.0 isodate-0.6.1 jsonschema-4.24.0 jsonschema-specifications-2025.4.1 jupyter-core-5.8.1 leather-0.4.0 mashumaro-3.14 more-itertools-10.7.0 msgpack-1.1.1 nbformat-5.10.4 networkx-3.5 numpy-2.3.1 oauthlib-3.3.1 ordered-set-4.1.0 packaging-25.0 pandas-2.3.0 pandas-gbq-0.29.1 parsedatetime-2.6 pathspec-0.12.1 platformdirs-4.3.8 proto-plus-1.26.1 protobuf-5.29.5 pyarrow-20.0.0 pyasn1-0.6.1 pyasn1-modules-0.4.2 pydantic-2.11.7 pydantic-core-2.33.2 pydata-google-auth-1.9.1 python-dateutil-2.9.0.post0 python-slugify-8.0.4 pytimeparse-1.1.8 pytz-2025.2 pyyaml-6.0.2 referencing-0.36.2 requests-2.32.4 requests-oauthlib-2.0.0 rpds-py-0.26.0 rsa-4.9.1 setuptools-80.9.0 shapely-2.1.1 six-1.17.0 sniffio-1.3.1 snowplow-tracker-1.1.0 sqlparse-0.5.3 tenacity-8.5.0 text-unidecode-1.3 traitlets-5.14.3 typing-extensions-4.14.1 typing-inspection-0.4.1 tzdata-2025.2 urllib3-2.5.0 websockets-15.0.1 zipp-3.23.0
+  (dbtProjects) kaush@DESKTOP-99UABT9:~/kd/DBT Project$ dbt --version
+  Core:
+    - installed: 1.10.3
+    - latest:    1.10.3 - Up to date!
+
+  Plugins:
+    - bigquery: 1.9.2 - Up to date!
+
+
+  (dbtProjects) kaush@DESKTOP-99UABT9:~/kd/DBT Project$ dbt init dbtproject
+  10:33:05  Running with dbt=1.10.3
+  10:33:05  
+  Your new dbt project "dbtproject" was created!
+
+  For more information on how to configure the profiles.yml file,
+  please consult the dbt documentation here:
+
+    https://docs.getdbt.com/docs/configure-your-profile
+
+  One more thing:
+
+  Need help? Don't hesitate to reach out to us via GitHub issues or on Slack:
+
+    https://community.getdbt.com/
+
+  Happy modeling!
+
+  10:33:05  Setting up your profile.
+  Which database would you like to use?
+  [1] bigquery
+
+  (Don't see the one you want? https://docs.getdbt.com/docs/available-adapters)
+
+  Enter a number: ^C10:33:30  Encountered an error:
+
+  10:33:30  Traceback (most recent call last):
+    File "/home/kaush/kd/DBT Project/dbtProjects/lib/python3.12/site-packages/dbt/cli/requires.py", line 161, in wrapper
+      result, success = func(*args, **kwargs)
+                        ^^^^^^^^^^^^^^^^^^^^^
+    File "/home/kaush/kd/DBT Project/dbtProjects/lib/python3.12/site-packages/dbt/cli/requires.py", line 111, in wrapper
+      return func(*args, **kwargs)
+            ^^^^^^^^^^^^^^^^^^^^^
+    File "/home/kaush/kd/DBT Project/dbtProjects/lib/python3.12/site-packages/dbt/cli/main.py", line 483, in init
+      results = task.run()
+                ^^^^^^^^^^
+    File "/home/kaush/kd/DBT Project/dbtProjects/lib/python3.12/site-packages/dbt/task/init.py", line 346, in run
+      self.setup_profile(profile_name)
+    File "/home/kaush/kd/DBT Project/dbtProjects/lib/python3.12/site-packages/dbt/task/init.py", line 261, in setup_profile
+      adapter = self.ask_for_adapter_choice()
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    File "/home/kaush/kd/DBT Project/dbtProjects/lib/python3.12/site-packages/dbt/task/init.py", line 242, in ask_for_adapter_choice
+      numeric_choice = click.prompt(prompt_msg, type=click.INT)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    File "/home/kaush/kd/DBT Project/dbtProjects/lib/python3.12/site-packages/click/termui.py", line 168, in prompt
+      value = prompt_func(prompt)
+              ^^^^^^^^^^^^^^^^^^^
+    File "/home/kaush/kd/DBT Project/dbtProjects/lib/python3.12/site-packages/click/termui.py", line 151, in prompt_func
+      raise Abort() from None
+  click.exceptions.Abort
+
+  (dbtProjects) kaush@DESKTOP-99UABT9:~/kd/DBT Project$ cd dbtproject
+  (dbtProjects) kaush@DESKTOP-99UABT9:~/kd/DBT Project/dbtproject$ dbt debug
+  10:44:24  Running with dbt=1.10.3
+  10:44:24  dbt version: 1.10.3
+  10:44:24  python version: 3.12.3
+  10:44:24  python path: /home/kaush/kd/DBT Project/dbtProjects/bin/python3
+  10:44:24  os info: Linux-5.15.167.4-microsoft-standard-WSL2-x86_64-with-glibc2.39
+  10:44:26  Using profiles dir at /home/kaush/.dbt
+  10:44:26  Using profiles.yml file at /home/kaush/.dbt/profiles.yml
+  10:44:26  Using dbt_project.yml file at /home/kaush/kd/DBT Project/dbtproject/dbt_project.yml
+  10:44:26  adapter type: bigquery
+  10:44:26  adapter version: 1.9.2
+  10:44:27  Configuration:
+  10:44:27    profiles.yml file [OK found and valid]
+  10:44:27    dbt_project.yml file [OK found and valid]
+  10:44:27  Required dependencies:
+  10:44:27   - git [OK found]
+
+  10:44:27  Connection:
+  10:44:27    method: oauth
+  10:44:27    database: your-gcp-project-id
+  10:44:27    execution_project: your-gcp-project-id
+  10:44:27    schema: your_dbt_dataset
+  10:44:27    location: US
+  10:44:27    priority: None
+  10:44:27    maximum_bytes_billed: None
+  10:44:27    impersonate_service_account: None
+  10:44:27    job_retry_deadline_seconds: None
+  10:44:27    job_retries: 1
+  10:44:27    job_creation_timeout_seconds: None
+  10:44:27    job_execution_timeout_seconds: None
+  10:44:27    timeout_seconds: None
+  10:44:27    client_id: None
+  10:44:27    token_uri: None
+  10:44:27    compute_region: None
+  10:44:27    dataproc_cluster_name: None
+  10:44:27    gcs_bucket: None
+  10:44:27    dataproc_batch: None
+  10:44:27  Registered adapter: bigquery=1.9.2
+  10:44:42    Connection test: [ERROR]
+
+  10:44:42  1 check failed:
+  10:44:42  dbt was unable to connect to the specified database.
+  The database returned the following error:
+
+    >'NoneType' object has no attribute 'close'
+
+  Check your database credentials and try again. For more information, visit:
+  https://docs.getdbt.com/docs/configure-your-profile
+
+
+  (dbtProjects) kaush@DESKTOP-99UABT9:~/kd/DBT Project/dbtproject$ dbt debug
+  10:52:03  Running with dbt=1.10.3
+  10:52:03  dbt version: 1.10.3
+  10:52:03  python version: 3.12.3
+  10:52:03  python path: /home/kaush/kd/DBT Project/dbtProjects/bin/python3
+  10:52:03  os info: Linux-5.15.167.4-microsoft-standard-WSL2-x86_64-with-glibc2.39
+  10:52:05  Using profiles dir at /home/kaush/.dbt
+  10:52:05  Using profiles.yml file at /home/kaush/.dbt/profiles.yml
+  10:52:05  Using dbt_project.yml file at /home/kaush/kd/DBT Project/dbtproject/dbt_project.yml
+  10:52:05  adapter type: bigquery
+  10:52:05  adapter version: 1.9.2
+  10:52:05  Configuration:
+  10:52:05    profiles.yml file [OK found and valid]
+  10:52:05    dbt_project.yml file [OK found and valid]
+  10:52:05  Required dependencies:
+  10:52:05   - git [OK found]
+
+  10:52:05  Connection:
+  10:52:05    method: oauth
+  10:52:05    database: internal-data-bigquery-kaushik
+  10:52:05    execution_project: internal-data-bigquery-kaushik
+  10:52:05    schema: openpowerlifting
+  10:52:05    location: US
+  10:52:05    priority: None
+  10:52:05    maximum_bytes_billed: None
+  10:52:05    impersonate_service_account: None
+  10:52:05    job_retry_deadline_seconds: None
+  10:52:05    job_retries: 1
+  10:52:05    job_creation_timeout_seconds: None
+  10:52:05    job_execution_timeout_seconds: None
+  10:52:05    timeout_seconds: None
+  10:52:05    client_id: None
+  10:52:05    token_uri: None
+  10:52:05    compute_region: None
+  10:52:05    dataproc_cluster_name: None
+  10:52:05    gcs_bucket: None
+  10:52:05    dataproc_batch: None
+  10:52:05  Registered adapter: bigquery=1.9.2
+  10:52:17    Connection test: [ERROR]
+
+  10:52:17  1 check failed:
+  10:52:17  dbt was unable to connect to the specified database.
+  The database returned the following error:
+
+    >'NoneType' object has no attribute 'close'
+
+  Check your database credentials and try again. For more information, visit:
+  https://docs.getdbt.com/docs/configure-your-profile
+
+
+  (dbtProjects) kaush@DESKTOP-99UABT9:~/kd/DBT Project/dbtproject$ dbt debug
+  10:56:22  Running with dbt=1.10.3
+  10:56:22  dbt version: 1.10.3
+  10:56:22  python version: 3.12.3
+  10:56:22  python path: /home/kaush/kd/DBT Project/dbtProjects/bin/python3
+  10:56:22  os info: Linux-5.15.167.4-microsoft-standard-WSL2-x86_64-with-glibc2.39
+  10:56:24  Using profiles dir at /home/kaush/.dbt
+  10:56:24  Using profiles.yml file at /home/kaush/.dbt/profiles.yml
+  10:56:24  Using dbt_project.yml file at /home/kaush/kd/DBT Project/dbtproject/dbt_project.yml
+  10:56:24  adapter type: bigquery
+  10:56:24  adapter version: 1.9.2
+  10:56:24  Configuration:
+  10:56:24    profiles.yml file [OK found and valid]
+  10:56:24    dbt_project.yml file [OK found and valid]
+  10:56:24  Required dependencies:
+  10:56:24   - git [OK found]
+
+  10:56:24  Connection:
+  10:56:24    method: oauth
+  10:56:24    database: internal-data-bigquery-kaushik
+  10:56:24    execution_project: internal-dat
